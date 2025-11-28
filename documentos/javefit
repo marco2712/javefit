@@ -1,0 +1,288 @@
+\documentclass[12pt]{article}
+
+% ----------------------------------------------------------
+%                Paquetes y Configuraciones
+% ----------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{siunitx}
+\usepackage{float}
+
+\onehalfspacing
+
+% ----------------------------------------------------------
+%             Configuración de siunitx (COP)
+% ----------------------------------------------------------
+\sisetup{
+  group-separator = {.},
+  group-minimum-digits = 3
+}
+
+% ----------------------------------------------------------
+%                Colores corporativos
+% ----------------------------------------------------------
+\definecolor{JaveBlue}{RGB}{0,51,102}
+\definecolor{LightGray}{RGB}{245,245,245}
+\definecolor{SoftBlue}{RGB}{212,228,255}
+
+% ----------------------------------------------------------
+%                Estilos de títulos
+% ----------------------------------------------------------
+\titleformat{\section}{\large\bfseries\color{JaveBlue}}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{JaveBlue}}{\thesubsection}{0.5em}{}
+
+% ----------------------------------------------------------
+%                Documento
+% ----------------------------------------------------------
+\begin{document}
+
+% ----------------------------------------------------------
+%                     Portada Premium
+% ---------------------------------------------------------
+\begin{titlepage}
+    \centering
+
+    % Logo de la empresa (sin entorno figure)
+    \includegraphics[width=0.70\textwidth]{wave_logo_tech_2.png}
+
+
+    {\Large\textbf{WAVECORE TECHNOLOGIES}}
+
+    \vspace{2cm}
+
+    {\Huge \textbf{Propuesta de Valor – JaveFit}}\\[0.7cm]
+    {\Large Aplicación Móvil para la Pontificia Universidad Javeriana Cali}\\[0.5cm]
+    
+    \vfill
+    {\Large \textbf{WaveCore Technologies}}\\[0.2cm]
+    
+    \textbf{\today}
+    
+    \vspace*{1cm}
+\end{titlepage}
+
+\newpage
+
+% ----------------------------------------------------------
+%                     Sección 1
+% ----------------------------------------------------------
+\section{Introducción}
+
+JaveFit es una aplicación móvil desarrollada en \textbf{React Native} que busca mejorar la experiencia de los estudiantes que utilizan el gimnasio de la Pontificia Universidad Javeriana Cali. Su objetivo principal es brindar rutinas personalizadas, seguimiento de progreso físico, herramientas informativas para el uso de máquinas y sistemas avanzados de análisis.
+
+JaveFit representa un ecosistema tecnológico integral que combina:
+
+\begin{itemize}
+    \item Personalización del entrenamiento
+    \item Integración con dispositivos inteligentes
+    \item Conectividad con sistemas institucionales
+    \item Herramientas avanzadas para instructores
+    \item Visualizaciones modernas y contenido educativo 3D
+\end{itemize}
+
+\section{Funcionalidades Principales para Estudiantes}
+
+\subsection{Rutinas Personalizadas y Adaptativas}
+La app genera rutinas dinámicas basadas en niveles, objetivos y disponibilidad de tiempo. A medida que el estudiante progresa, la app ajusta automáticamente las cargas y repeticiones.
+
+\subsection{Interacción con Equipos del Gimnasio}
+JaveFit muestra instrucciones sobre el uso de máquinas, detecta equipos disponibles e incluye contenido visual para mejorar la ejecución adecuada de cada ejercicio.
+
+\subsection{Seguimiento Estadístico y Progreso}
+Los usuarios pueden registrar datos como peso, repeticiones y tiempo de descanso. La app genera gráficos interactivos y estadísticas de rendimiento.
+
+\subsection{Control Nutricional y Calórico}
+Incluye registro de alimentos, recomendaciones nutricionales y seguimiento del balance entre calorías consumidas y quemadas.
+
+\subsection{Comunidad Estudiantil}
+Los estudiantes pueden compartir logros, participar en retos y motivarse mediante una red interna de bienestar universitario.
+
+\section{Nuevas Funcionalidades Avanzadas}
+
+\subsection{Integración con Oracle}
+La app se integrará con la base de datos institucional mediante Oracle, permitiendo:
+
+\begin{itemize}
+    \item Acceso con credenciales institucionales
+    \item Sincronización con información oficial del estudiante
+    \item Seguridad y trazabilidad garantizadas por la infraestructura de la universidad
+\end{itemize}
+
+\subsection{Modelos 3D Anatómicos}
+JaveFit incluirá modelos 3D de la anatomía humana que permitirán visualizar:
+
+\begin{itemize}
+    \item Grupos musculares activados por ejercicio
+    \item Técnica correcta con rotación 360°
+    \item Movimientos biomecánicos seguros
+\end{itemize}
+
+\noindent\textbf{Fase inicial (prototipo): guías visuales 2D.} Mientras integramos el visor 3D interactivo, implementaremos una primera versión basada en material visual por ejercicio que incluye:
+\begin{itemize}
+    \item \textbf{Foto de guía de ejecución}: referencia de postura y rangos de movimiento.
+    \item \textbf{Imagen del músculo objetivo}: resalta el grupo muscular principal a trabajar.
+\end{itemize}
+
+Las imágenes de referencia se almacenan en la carpeta \texttt{fotos guia} del proyecto. A continuación, se ilustra un ejemplo de cómo se incorporarán estas guías dentro del documento y la aplicación:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../fotos guia/imagen de guia.png}
+        \\[2mm]\small Guía de ejecución
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../fotos guia/musculo.jpeg}
+        \\[2mm]\small Músculo objetivo
+    \end{minipage}
+    \caption{Ejemplo de material guía por ejercicio (fase inicial).}
+\end{figure}
+
+\subsection{Acceso Biométrico}
+El ingreso rápido se habilitará mediante:
+
+\begin{itemize}
+    \item Huella dactilar (Android)
+    \item FaceID (iOS)
+\end{itemize}
+
+\subsection{Báscula Digital Inteligente}
+Se propone adquirir una báscula inteligente compatible con la API de la app para registrar:
+
+\begin{itemize}
+    \item Peso
+    \item Porcentaje de grasa
+    \item Masa muscular
+    \item Historial de evolución corporal
+\end{itemize}
+
+\section{Funcionalidades para Instructores}
+
+\subsection{Panel Administrativo}
+Un panel web permitirá:
+
+\begin{itemize}
+    \item Crear y gestionar rutinas
+    \item Revisar estadísticas de estudiantes
+    \item Generar reportes y análisis
+\end{itemize}
+
+\subsection{Historial de Actividades}
+Los instructores podrán llevar seguimiento detallado del progreso de los estudiantes.
+
+\section{Beneficios para la Universidad}
+
+La implementación de una aplicación de salud y ejercicio diseñada para la comunidad javeriana ofrece ventajas que se alinean directamente con la misión educativa y humana de la tradición jesuita, promoviendo el desarrollo integral de cada miembro de la comunidad.
+
+\subsection{Fomento del Bienestar Integral}
+La Compañía de Jesús resalta la importancia del \textit{cura personalis}, el cuidado integral de la persona.  
+Una app de salud permite acompañar a estudiantes, profesores y colaboradores en el desarrollo de hábitos físicos saludables, contribuyendo a su bienestar emocional, corporal y académico. Esto consolida un ambiente universitario donde cada individuo puede crecer de manera equilibrada.
+
+\subsection{Promoción de la Comunidad y el Sentido de Pertenencia}
+La plataforma crea espacios digitales para retos, seguimientos compartidos y actividades grupales que fortalecen el tejido social javeriano.  
+Tal como lo proponen los valores ignacianos, se fomenta una comunidad unida, activa y solidaria, donde el ejercicio y el bienestar se convierten en medios para fortalecer vínculos y promover un espíritu de colaboración.
+
+\subsection{Disciplina y Hábitos Saludables Basados en el Autoconocimiento}
+La tradición jesuita invita al discernimiento y la reflexión personal.  
+El uso de métricas, análisis de progreso y recomendaciones personalizadas ayuda a que los usuarios conozcan mejor su cuerpo, identifiquen sus necesidades reales y desarrollen hábitos consistentes. Esto impulsa la autonomía responsable y el compromiso con el propio desarrollo.
+
+\subsection{Optimización de los Espacios Deportivos}
+La aplicación facilita la gestión del gimnasio universitario y otros espacios deportivos mediante reservas, control de aforo y seguimiento de uso.  
+Esto permite que la universidad ofrezca una experiencia más organizada, eficiente y segura, alineada con la administración responsable de los recursos institucionales.
+
+\subsection{Fortalecimiento del Medio Universitario}
+Al promover la actividad física, el autocuidado y la participación en iniciativas de bienestar, la app contribuye a un medio universitario más sano, activo y participativo.  
+Esto apoya directamente la misión javeriana de formar personas comprometidas con su salud, su entorno y su comunidad.
+
+\subsection{Integración con Sistemas Institucionales}
+La conexión con plataformas como Oracle u otros sistemas internos garantiza seguridad, coherencia y gestión centralizada de datos.  
+Este ecosistema tecnológico fortalece la excelencia operativa y respalda la visión jesuita de utilizar los recursos de manera responsable y ética, siempre al servicio de las personas.
+
+
+% ----------------------------------------------------------
+%                     Costos Premium
+% ----------------------------------------------------------
+
+\section{Costos del Proyecto (COP)}
+
+A continuación se presenta la estimación de costos del desarrollo e implementación de JaveFit.
+
+\vspace{0.5cm}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.45}
+\setlength{\tabcolsep}{10pt}
+
+\rowcolors{2}{LightGray}{white}
+
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X 
+                               >{\raggedleft\arraybackslash}X}
+\toprule
+\rowcolor{JaveBlue}
+\textbf{\color{white} Concepto} & 
+\textbf{\color{white} Costo (COP)} \\
+\midrule
+
+Desarrollo de la app móvil (iOS y Android)  
+    & \num{00000000} \\
+
+Integración con Oracle (autenticación + datos institucionales) 
+    & \num{00000000} \\
+
+Modelos 3D anatómicos interactivos
+    & \num{00000000} \\
+
+Módulo de acceso biométrico
+    & \num{00000000} \\
+
+Panel web administrativo para instructores
+    & \num{00000000} \\
+
+Báscula digital inteligente (compatible con API)
+    & \num{00000000} \\
+
+Infraestructura de servidores (12 meses)
+    & \num{00000000} \\
+
+Diseño profesional UI/UX
+    & \num{00000000} \\
+
+Mantenimiento y soporte (6–12 meses)
+    & \num{00000000} \\
+
+\midrule
+\rowcolor{SoftBlue}
+\textbf{Total estimado} &
+\textbf{\num{00000000}} \\
+\bottomrule
+\end{tabularx}
+
+\end{table}
+
+\section{Conclusiones}
+
+JaveFit es una solución integral que combina tecnología, bienestar estudiantil, visualización avanzada y conectividad institucional. Su potencial impacto en salud, rendimiento académico y comunidad universitaria la convierte en una inversión estratégica para la Pontificia Universidad Javeriana Cali.
+
+\section*{Contacto}
+\textbf{WaveCore Technologies}\\
+\textbf{Desarrolladores:} David Niño y Marco Riascos\\
+\texttt{davidnino753@javerianacali.edu.co}\\
+\texttt{marcor27@javeriancali.edu.co}
+
+\end{document}

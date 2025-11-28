@@ -90,7 +90,7 @@ JaveFit representa un ecosistema tecnológico integral que combina:
     \item Integración con dispositivos inteligentes
     \item Conectividad con sistemas institucionales
     \item Herramientas avanzadas para instructores
-    \item Visualizaciones modernas y contenido educativo 3D
+    \item Guías visuales de ejecución y anatomía
 \end{itemize}
 
 \section{Funcionalidades Principales para Estudiantes}
@@ -121,14 +121,12 @@ La app se integrará con la base de datos institucional mediante Oracle, permiti
     \item Seguridad y trazabilidad garantizadas por la infraestructura de la universidad
 \end{itemize}
 
-\subsection{Guías visuales de ejecución (fase inicial)}
-Para el prototipo implementaremos material visual por ejercicio que incluye:
+\subsection{Guías visuales de ejecución y anatomía}
+El proyecto incorpora material visual por ejercicio que incluye:
 \begin{itemize}
     \item \textbf{Foto de guía de ejecución}: referencia de postura y rangos de movimiento.
     \item \textbf{Imagen del músculo objetivo}: resalta el grupo muscular principal a trabajar.
 \end{itemize}
-
-Las imágenes de referencia se almacenan en la carpeta \texttt{fotos guia} del proyecto. A continuación, se ilustra un ejemplo de cómo se incorporarán estas guías dentro del documento y la aplicación:
 
 \begin{figure}[H]
     \centering
@@ -142,7 +140,7 @@ Las imágenes de referencia se almacenan en la carpeta \texttt{fotos guia} del p
         \includegraphics[width=\linewidth]{../fotos guia/musculo.jpeg}
         \\\[2mm]\small Músculo objetivo
     \end{minipage}
-    \caption{Ejemplo de material guía por ejercicio (fase inicial).}
+    \caption{Ejemplo de material guía por ejercicio.}
 \end{figure}
 
 \subsection{Acceso Biométrico}

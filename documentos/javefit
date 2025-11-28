@@ -121,16 +121,8 @@ La app se integrará con la base de datos institucional mediante Oracle, permiti
     \item Seguridad y trazabilidad garantizadas por la infraestructura de la universidad
 \end{itemize}
 
-\subsection{Modelos 3D Anatómicos}
-JaveFit incluirá modelos 3D de la anatomía humana que permitirán visualizar:
-
-\begin{itemize}
-    \item Grupos musculares activados por ejercicio
-    \item Técnica correcta con rotación 360°
-    \item Movimientos biomecánicos seguros
-\end{itemize}
-
-\noindent\textbf{Fase inicial (prototipo): guías visuales 2D.} Mientras integramos el visor 3D interactivo, implementaremos una primera versión basada en material visual por ejercicio que incluye:
+\subsection{Guías visuales de ejecución (fase inicial)}
+Para el prototipo implementaremos material visual por ejercicio que incluye:
 \begin{itemize}
     \item \textbf{Foto de guía de ejecución}: referencia de postura y rangos de movimiento.
     \item \textbf{Imagen del músculo objetivo}: resalta el grupo muscular principal a trabajar.
@@ -143,12 +135,12 @@ Las imágenes de referencia se almacenan en la carpeta \texttt{fotos guia} del p
     \begin{minipage}{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{../fotos guia/imagen de guia.png}
-        \\[2mm]\small Guía de ejecución
+        \\\[2mm]\small Guía de ejecución
     \end{minipage}\hfill
     \begin{minipage}{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{../fotos guia/musculo.jpeg}
-        \\[2mm]\small Músculo objetivo
+        \\\[2mm]\small Músculo objetivo
     \end{minipage}
     \caption{Ejemplo de material guía por ejercicio (fase inicial).}
 \end{figure}
